@@ -19,6 +19,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {pokemonData} from './pokemonData';
 
 // Taken directly from https://github.com/MatheusPires99/pokedex
 const POKEMON_TYPE_COLORS = {
@@ -43,17 +44,7 @@ const POKEMON_TYPE_COLORS = {
 };
 
 const PokemonCard = memo(({item}) => {
-  const [data, setData] = useState<Pokemon | null>(null);
-
-  useEffect(() => {
-    // Obviously this should be cached but this is just a POC to test
-    const loadData = async () => {
-      const response = await fetch(item.url);
-      setData(await response.json());
-    };
-
-    loadData();
-  }, [item.url]);
+  const data = pokemonData[item.url];
 
   return (
     <View style={{width: '50%'}}>
@@ -75,8 +66,16 @@ const PokemonCard = memo(({item}) => {
             justifyContent: 'space-between',
             paddingRight: 10,
           }}>
-          <Text style={{fontSize: 16, color: 'white', fontWeight: 'bold'}}>
-            {item.name.toUpperCase()}
+          <Text
+            numberOfLines={1}
+            style={{
+              fontSize: 16,
+              color: 'white',
+              fontWeight: 'bold',
+              flex: 1,
+              paddingRight: 5,
+            }}>
+            {item.name.toUpperCase()} {item.name.toUpperCase()}
           </Text>
           {data ? (
             <Text style={{fontSize: 12, color: '#6666'}}>
@@ -94,6 +93,7 @@ const PokemonCard = memo(({item}) => {
             <View style={{flex: 1, paddingTop: 20}}>
               {data.types.map(({type}) => (
                 <View
+                  key={type.name}
                   style={{
                     width: '100%',
                     justifyContent: 'center',
@@ -148,7 +148,7 @@ const App: () => Node = () => {
 
       <FlatList
         numColumns={2}
-        keyExtractor={item => item.name}
+        keyExtractor={item => item.url}
         data={data}
         renderItem={renderItem}
         contentContainerStyle={{paddingHorizontal: 5}}
