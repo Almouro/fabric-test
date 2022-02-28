@@ -13,4 +13,4 @@ Worth mentioning the thread with the highest CPU usage isn't even the JS thread,
 
 | With Fabric                                                                                                     | Without Fabric                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| ![fabric](https://user-images.githubusercontent.com/4534323/155100122-1c9ca8ce-adce-4c3c-afba-e19b7b2d2aa7.gif) | ![notfabric](https://user-images.githubusercontent.com/4534323/155100135-3722654a-e993-49d2-b2c3-0ee39a546542.gif) |
+|![retry-fabric](https://user-images.githubusercontent.com/4534323/156025605-a0ee0ecd-afbf-4121-a312-860d924cca31.gif)|![retry-notfabric](https://user-images.githubusercontent.com/4534323/156025627-1a303f6e-b854-4b42-897a-4ab08d09d899.gif)|
