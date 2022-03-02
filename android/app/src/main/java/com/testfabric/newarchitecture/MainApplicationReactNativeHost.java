@@ -16,7 +16,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.UIManager;
 import com.facebook.react.fabric.ComponentFactory;
 import com.facebook.react.fabric.CoreComponentsRegistry;
-import com.facebook.react.fabric.EmptyReactNativeConfig;
+import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
 import com.testfabric.BuildConfig;
@@ -105,7 +105,28 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                 return new FabricJSIModuleProvider(
                     reactApplicationContext,
                     componentFactory,
-                    new EmptyReactNativeConfig(),
+                    new ReactNativeConfig() {
+                      @Override
+                      public boolean getBool(String s) {
+                        return s.equals(
+                            "react_fabric:enable_large_text_measure_cache_android");
+                      }
+
+                      @Override
+                      public int getInt64(String s) {
+                        return 0;
+                      }
+
+                      @Override
+                      public String getString(String s) {
+                        return "";
+                      }
+
+                      @Override
+                      public double getDouble(String s) {
+                        return 0;
+                      }
+                    },
                     viewManagerRegistry);
               }
             });
