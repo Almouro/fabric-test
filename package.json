@@ -10,8 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "17.0.2",
-    "react-native": "0.68.0-rc.2"
+    "react-native": "0.68.0-rc.2",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
