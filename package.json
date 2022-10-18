@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@bam.tech/appium-helper": "^0.5.0",
+    "@perf-profiler/appium-test-cases": "^0.3.4",
+    "@perf-profiler/e2e": "^0.3.2"
+  },
+  "dependencies": {}
+}
