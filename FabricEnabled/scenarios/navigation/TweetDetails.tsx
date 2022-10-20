@@ -1,3 +1,4 @@
+import React from 'react';
 import {useRoute} from '@react-navigation/native';
 import {useMemo} from 'react';
 import {TweetList} from './components/TweetList';

@@ -4,7 +4,7 @@ This repo aims to provide different scenarios to benchmark performance differenc
 
 ## Scenario 1: Just display 10k views
 
-- [Code](./FabricEnabled/thousand-views/App.tsx)
+- [Code](./FabricEnabled/scenarios/thousand-views/App.tsx)
 - [Results](https://rn-new-arch-perf.netlify.app/a10s/manyviews/report)
 
 ### Run performance test
@@ -16,29 +16,9 @@ This repo aims to provide different scenarios to benchmark performance differenc
 
 More details on https://github.com/bamlab/android-performance-profiler
 
-### Build APKs
-
-1. Change scenario import in `FabricEnabled/index.js`
-
-2. Copy code to `FabricDisabled`
-
-```shell
-# Copy code
-cp -R FabricEnabled/index.js FabricDisabled
-cp -R FabricEnabled/thousand-views FabricDisabled
-```
-
-3. Make release builds
-
-```shell
-# Run builds
-cd FabricEnabled/android && ./gradlew assembleRelease
-cd FabricDisabled/android && ./gradlew assembleRelease
-```
-
 ## Scenario 2: Just display 1k texts
 
-- [Code](./FabricEnabled/thousand-texts/App.tsx)
+- [Code](./FabricEnabled/scenarios/thousand-texts/App.tsx)
 - [Results](https://rn-new-arch-perf.netlify.app/a10s/manytexts/report)
 
 ### Run performance test
@@ -50,13 +30,21 @@ cd FabricDisabled/android && ./gradlew assembleRelease
 
 More details on https://github.com/bamlab/android-performance-profiler
 
-### Build APKs
+## Build APKs
+
+1. Change scenario import in `FabricEnabled/index.js`
+
+2. Copy code to `FabricDisabled`
 
 ```shell
 # Copy code
 cp -R FabricEnabled/index.js FabricDisabled
-cp -R FabricEnabled/thousand-views FabricDisabled
+cp -R FabricEnabled/scenarios FabricDisabled
+```
 
+3. Make release builds
+
+```shell
 # Run builds
 cd FabricEnabled/android && ./gradlew assembleRelease
 cd FabricDisabled/android && ./gradlew assembleRelease

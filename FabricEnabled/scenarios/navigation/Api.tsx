@@ -15,17 +15,17 @@ export const getUser = () =>
   fetchJson('https://rn-eu-perf-usual-suspects.herokuapp.com/user');
 export const getUserStats = () =>
   fetchJson('https://rn-eu-perf-usual-suspects.herokuapp.com/user-stats');
-export const getTweets = (): Tweet[] =>
+export const getTweets = (): Promise<Tweet[]> =>
   fetchJson('https://flperf-reports-915881.netlify.app/data/feed.json');
-export const getLikes = (): Tweet[] =>
+export const getLikes = (): Promise<Tweet[]> =>
   fetchJson('https://flperf-reports-915881.netlify.app/data/feed.json').then(
     feed => feed.slice(50),
   );
-export const getMedia = (): Tweet[] =>
+export const getMedia = (): Promise<Tweet[]> =>
   fetchJson('https://flperf-reports-915881.netlify.app/data/feed.json').then(
     feed => feed.slice(100),
   );
-export const getReplies = (): Tweet[] =>
+export const getReplies = (): Promise<Tweet[]> =>
   fetchJson('https://flperf-reports-915881.netlify.app/data/feed.json').then(
     feed => feed.slice(150),
   );

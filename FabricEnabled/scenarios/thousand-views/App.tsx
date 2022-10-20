@@ -4,8 +4,9 @@ import {Dimensions, ScrollView, StyleSheet, Text, View} from 'react-native';
 const styles = StyleSheet.create({
   container: {flexDirection: 'row', flexWrap: 'wrap'},
   view: {
-    height: 5,
-    width: 5,
+    height: 2,
+    width: 1,
+    margin: 1,
     backgroundColor: 'purple',
   },
   textContainer: {
@@ -30,16 +31,13 @@ const App = () => {
     <>
       <ScrollView>
         <View style={styles.container}>
-          {Array(10000)
+          {Array(10)
             .fill(null)
             .map((_, index) => (
               <View key={index} style={styles.view} testID={`VIEW_${index}`} />
             ))}
         </View>
       </ScrollView>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>LOADED</Text>
-      </View>
     </>
   );
 };
