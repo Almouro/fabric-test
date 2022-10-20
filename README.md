@@ -30,6 +30,20 @@ More details on https://github.com/bamlab/android-performance-profiler
 
 More details on https://github.com/bamlab/android-performance-profiler
 
+## Scenario 3: Just display 1k texts
+
+- [Code](./FabricEnabled/scenarios/tweets/App.tsx)
+- [Results](https://rn-new-arch-perf.netlify.app/a10s/100-tweets/report)
+
+### Run performance test
+
+1. In one terminal, run `npx appium`
+2. In another run `NEW_ARCH=false npx ts-node performance/tweets.ts`
+3. Then run `NEW_ARCH=true npx ts-node performance/tweets.ts`
+4. Compare results with `npx @perf-profiler/web-reporter results_*`
+
+More details on https://github.com/bamlab/android-performance-profiler
+
 ## Build APKs
 
 1. Change scenario import in `FabricEnabled/index.js`

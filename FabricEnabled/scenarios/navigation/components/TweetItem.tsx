@@ -28,7 +28,7 @@ const Metrics = ({tweet}: {tweet: Tweet}) => (
 );
 
 const TweetImage = ({tweet}: {tweet: Tweet}) =>
-  tweet.image && tweet.id.endsWith('1') ? (
+  tweet.image ? (
     <Image
       source={{uri: tweet.image.url}}
       style={{
@@ -83,7 +83,9 @@ export const TweetItem = ({tweet}: {tweet: Tweet}) => {
     <Pressable
     // onPress={() => navigate('TweetDetails', {tweetId: tweet.id})}
     >
-      <View style={{flexDirection: 'row', paddingHorizontal: 10}}>
+      <View
+        style={{flexDirection: 'row', paddingHorizontal: 10}}
+        testID={`TWEET_${tweet.id}`}>
         <TweetAvatar tweet={tweet} />
         <View style={{flex: 1}}>
           <TweetHeader tweet={tweet} />
