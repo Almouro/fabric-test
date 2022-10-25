@@ -31,7 +31,7 @@ const App = () => {
     <>
       <ScrollView>
         <View style={styles.container}>
-          {Array(10)
+          {Array(10000)
             .fill(null)
             .map((_, index) => (
               <View key={index} style={styles.view} testID={`VIEW_${index}`} />
