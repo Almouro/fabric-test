@@ -44,6 +44,20 @@ More details on https://github.com/bamlab/android-performance-profiler
 
 More details on https://github.com/bamlab/android-performance-profiler
 
+## Scenario 4: Just display 2k SVGs
+
+- [Code](./FabricEnabled/scenarios/svg/App.tsx)
+- [Results](https://rn-new-arch-perf.netlify.app/a10s/2k-svgs/report)
+
+### Run performance test
+
+1. In one terminal, run `npx appium`
+2. In another run `NEW_ARCH=false npx ts-node performance/svg.ts`
+3. Then run `NEW_ARCH=true npx ts-node performance/svg.ts`
+4. Compare results with `npx @perf-profiler/web-reporter results_*`
+
+More details on https://github.com/bamlab/android-performance-profiler
+
 ## Build APKs
 
 1. Change scenario import in `FabricEnabled/index.js`
