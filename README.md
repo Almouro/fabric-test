@@ -30,7 +30,7 @@ More details on https://github.com/bamlab/android-performance-profiler
 
 More details on https://github.com/bamlab/android-performance-profiler
 
-## Scenario 3: Just display 1k texts
+## Scenario 3: Just display 100 tweets
 
 - [Code](./FabricEnabled/scenarios/tweets/App.tsx)
 - [Results](https://rn-new-arch-perf.netlify.app/a10s/100-tweets/report)
