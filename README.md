@@ -21,6 +21,13 @@ More details on https://github.com/bamlab/android-performance-profiler
 - [Code](./FabricEnabled/scenarios/thousand-texts/App.tsx)
 - [Results](https://rn-new-arch-perf.netlify.app/a10s/manytexts/report)
 
+### Install APKs
+
+```
+adb install apks/fabric-many-texts.apk
+adb install apks/nofabric-many-texts.apk
+```
+
 ### Run performance test
 
 1. In one terminal, run `npx appium`
@@ -34,6 +41,13 @@ More details on https://github.com/bamlab/android-performance-profiler
 
 - [Code](./FabricEnabled/scenarios/tweets/App.tsx)
 - [Results](https://rn-new-arch-perf.netlify.app/a10s/100-tweets/report)
+
+### Install APKs
+
+```
+adb install apks/fabric-100-tweets.apk
+adb install apks/nofabric-100-tweets.apk
+```
 
 ### Run performance test
 
@@ -54,6 +68,28 @@ More details on https://github.com/bamlab/android-performance-profiler
 1. In one terminal, run `npx appium`
 2. In another run `NEW_ARCH=false npx ts-node performance/svg.ts`
 3. Then run `NEW_ARCH=true npx ts-node performance/svg.ts`
+4. Compare results with `npx @perf-profiler/web-reporter results_*`
+
+More details on https://github.com/bamlab/android-performance-profiler
+
+## Scenario 5: Pokedex Flatlist
+
+- [Code](./FabricEnabled/scenarios/pokedex/App.tsx)
+- [Results low end Android](https://rn-new-arch-perf.netlify.app/j3/flatlist/report)
+- [Results high end Android](https://rn-new-arch-perf.netlify.app/s10/flatlist/report)
+
+### Install APKs
+
+```
+adb install apks/fabric-flatlist.apk
+adb install apks/nofabric-flatlist.apk
+```
+
+### Run performance test
+
+1. In one terminal, run `npx appium`
+2. In another run `NEW_ARCH=false npx ts-node performance/lists.ts`
+3. Then run `NEW_ARCH=true npx ts-node performance/lists.ts`
 4. Compare results with `npx @perf-profiler/web-reporter results_*`
 
 More details on https://github.com/bamlab/android-performance-profiler
