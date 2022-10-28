@@ -2,14 +2,14 @@ import { AppiumDriver } from "@bam.tech/appium-helper";
 import { measurePerformance, TestCase } from "@perf-profiler/e2e";
 import { createStartAppTestCase } from "@perf-profiler/appium-test-cases";
 
-const FABRIC_ENABLED = true;
+const FABRIC_ENABLED = process.env.NEW_ARCH === "true";
 const NAME_PREFIX = FABRIC_ENABLED ? "FABRIC " : "NO_FABRIC ";
 
 const bundleId = `com.fabric${FABRIC_ENABLED ? "enabled" : "disabled"}`;
 const appActivity = `${bundleId}.MainActivity`;
 
 const getTitle = (testCaseName: string) =>
-  `Results ${NAME_PREFIX} ${testCaseName}`;
+  `${testCaseName} - New Arch ${FABRIC_ENABLED ? "ENABLED ✅" : "DISABLED ❌"}`;
 
 const runNavigationPerformanceTest = async () => {
   const driver = await AppiumDriver.create({

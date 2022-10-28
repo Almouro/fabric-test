@@ -85,11 +85,30 @@ adb install apks/fabric-flatlist.apk
 adb install apks/nofabric-flatlist.apk
 ```
 
+## Scenario 6: Navigation
+
+- [Code](./FabricEnabled/scenarios/navigation/App.tsx)
+- Results low end Android
+  - [App start](https://rn-new-arch-perf.netlify.app/a10s/navigation/start/report)
+  - [Tab navigation](https://rn-new-arch-perf.netlify.app/a10s/navigation/tabs/report)
+  - [Stack navigation](https://rn-new-arch-perf.netlify.app/a10s/navigation/stack/report)
+- Results high end Android (Pixel 6 Pro)
+  - [App start](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/start/report)
+  - [Tab navigation](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/tabs/report)
+  - [Stack navigation](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/stack/report)
+
+### Install APKs
+
+```
+adb install apks/navigation-fabric.apk
+adb install apks/navigation-nofabric.apk
+```
+
 ### Run performance test
 
 1. In one terminal, run `npx appium`
-2. In another run `NEW_ARCH=false npx ts-node performance/lists.ts`
-3. Then run `NEW_ARCH=true npx ts-node performance/lists.ts`
+2. In another run `NEW_ARCH=false npx ts-node performance/navigation.ts`
+3. Then run `NEW_ARCH=true npx ts-node performance/navigation.ts`
 4. Compare results with `npx @perf-profiler/web-reporter results_*`
 
 More details on https://github.com/bamlab/android-performance-profiler
@@ -97,6 +116,8 @@ More details on https://github.com/bamlab/android-performance-profiler
 ## Build APKs
 
 1. Change scenario import in `FabricEnabled/index.js`
+
+- At the moment, if using `navigation` scenario, you also need to `git checkout navigation`
 
 2. Copy code to `FabricDisabled`
 
