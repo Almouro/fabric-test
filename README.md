@@ -90,11 +90,11 @@ adb install apks/nofabric-flatlist.apk
 - [Code](./FabricEnabled/scenarios/navigation/App.tsx)
 - Results low end Android
   - [App start](https://rn-new-arch-perf.netlify.app/a10s/navigation/start/report)
-  - [Tab navigation](https://rn-new-arch-perf.netlify.app/a10s/navigation/tabs/report)
+  - [Tab navigation](https://rn-new-arch-perf.netlify.app/a10s/navigation/tab/report)
   - [Stack navigation](https://rn-new-arch-perf.netlify.app/a10s/navigation/stack/report)
 - Results high end Android (Pixel 6 Pro)
   - [App start](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/start/report)
-  - [Tab navigation](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/tabs/report)
+  - [Tab navigation](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/tab/report)
   - [Stack navigation](https://rn-new-arch-perf.netlify.app/pixel6pro/navigation/stack/report)
 
 ### Install APKs
