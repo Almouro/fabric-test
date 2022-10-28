@@ -4,6 +4,7 @@ import {Image, Pressable, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import {format} from 'date-fns';
 import {Tweet} from '../Tweet';
+import {useNavigation} from '@react-navigation/native';
 // import {useNavigation} from '@react-navigation/native';
 
 const textStyle = {color: '#444'};
@@ -77,12 +78,10 @@ const TweetAvatar = ({tweet}: {tweet: Tweet}) => {
 };
 
 export const TweetItem = ({tweet}: {tweet: Tweet}) => {
-  // const {navigate} = useNavigation();
+  const {navigate} = useNavigation();
 
   return (
-    <Pressable
-    // onPress={() => navigate('TweetDetails', {tweetId: tweet.id})}
-    >
+    <Pressable onPress={() => navigate('TweetDetails', {tweetId: tweet.id})}>
       <View
         style={{flexDirection: 'row', paddingHorizontal: 10}}
         testID={`TWEET_${tweet.id}`}>

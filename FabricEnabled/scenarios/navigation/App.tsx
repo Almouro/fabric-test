@@ -4,15 +4,16 @@ import {NavigationContainer} from '@react-navigation/native';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import {Tabs} from './Tabs';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {TweetDetails} from './TweetDetails';
 
 const queryClient = new QueryClient();
 
-const Stack = createNativeStackNavigator();
-
 export default function App() {
   const [renderApp, setRenderApp] = React.useState(true);
+
+  // This crashes otherwise - See https://github.com/software-mansion/react-native-screens/issues/1620
+  const Stack =
+    require('@react-navigation/native-stack').createNativeStackNavigator();
 
   return (
     <View style={{flex: 1}}>

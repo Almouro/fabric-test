@@ -17,7 +17,7 @@ export const TweetList = ({feed}: {feed: Feed}) => {
         backgroundColor: 'white',
       }}>
       <View style={{paddingVertical: 10}}>
-        {feed.tweets.map((item, index) => (
+        {feed.tweets.slice(0, 10).map((item, index) => (
           <React.Fragment key={index}>
             {renderItem({item})}
             <ItemSeparatorComponent />
