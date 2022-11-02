@@ -40,7 +40,8 @@ More details on https://github.com/bamlab/android-performance-profiler
 ## Scenario 3: Just display 100 tweets
 
 - [Code](./FabricEnabled/scenarios/tweets/App.tsx)
-- [Results](https://rn-new-arch-perf.netlify.app/a10s/100-tweets/report)
+- [Results low end Android (Samsung A10s)](https://rn-new-arch-perf.netlify.app/a10s/100-tweets/report)
+- [Results low end Android (Moto X4)](https://rn-new-arch-perf.netlify.app/moto-x4/100tweets/report)
 
 ### Install APKs
 
@@ -75,8 +76,9 @@ More details on https://github.com/bamlab/android-performance-profiler
 ## Scenario 5: Pokedex Flatlist
 
 - [Code](./FabricEnabled/scenarios/pokedex/App.tsx)
-- [Results low end Android](https://rn-new-arch-perf.netlify.app/j3/flatlist/report)
-- [Results high end Android](https://rn-new-arch-perf.netlify.app/s10/flatlist/report)
+- [Results low end Android (Samsung J3 2017)](https://rn-new-arch-perf.netlify.app/j3/flatlist/report)
+- [Results low end Android (Moto X4)](https://rn-new-arch-perf.netlify.app/moto-x4/flatlist/report)
+- [Results high end Android (Samsung S10)](https://rn-new-arch-perf.netlify.app/s10/flatlist/report)
 
 ### Install APKs
 
