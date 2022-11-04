@@ -12,7 +12,7 @@ import {AppRegistry} from 'react-native';
 // Scenario 4
 // import App from './scenarios/svg/App';
 // Scenario 5
-import App from './scenarios/pokedex/App';
+import App from './scenarios/concurrent/App';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
