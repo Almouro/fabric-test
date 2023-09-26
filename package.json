@@ -1,8 +1,11 @@
 {
   "devDependencies": {
-    "@bam.tech/appium-helper": "^0.5.0",
-    "@perf-profiler/appium-test-cases": "^0.3.4",
-    "@perf-profiler/e2e": "^0.3.2"
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0",
+    "react-native": "^0.71.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "postinstall": "patch-package"
+  }
 }

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button} from 'react-native';
-import {getTweets} from '../navigation/Api';
-import {TweetList} from '../navigation/components/TweetList';
-import {Tweet} from '../navigation/Tweet';
+import {getTweets} from './navigation/Api';
+import {TweetList} from './navigation/components/TweetList';
+import {Tweet} from './navigation/Tweet';
 
 const TWEET_COUNT = 100;
 

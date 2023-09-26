@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {atom, useAtom} from 'jotai';
 
-const REACT_NATIVE_EU_DATE = '2023-03-26T00:00:00.000Z';
+const REACT_NATIVE_EU_DATE = '2024-03-26T00:00:00.000Z';
 const countDownDate = new Date(REACT_NATIVE_EU_DATE).getTime();
 
 const deriveValue = (calculate: (countdown: number) => number) =>

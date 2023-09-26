@@ -1,0 +1,12 @@
+appId: com.rn0720rc1_newarch_false_pokedex
+---
+- launchApp
+- assertVisible: BULBASAUR
+- repeat:
+    times: 10
+    commands:
+      # Fast scroll down
+      - swipe:
+          start: 50%, 90% # From (50% of width, 90% of height)
+          end: 50%, 10% # To (50% of width, 10% of height)
+          duration: 50

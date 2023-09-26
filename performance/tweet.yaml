@@ -1,0 +1,5 @@
+appId: com.rn0720rc1_newarch_false_tweets
+---
+- launchApp
+- tapOn: "SHOW TWEETS"
+- assertVisible: .*SAVE THE DATE.*

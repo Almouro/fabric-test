@@ -1,0 +1,26 @@
+diff --git a/node_modules/@react-native-community/cli/build/commands/init/init.js b/node_modules/@react-native-community/cli/build/commands/init/init.js
+index 34c1aeb..3c52846 100644
+--- a/node_modules/@react-native-community/cli/build/commands/init/init.js
++++ b/node_modules/@react-native-community/cli/build/commands/init/init.js
+@@ -145,7 +145,7 @@ async function installDependencies({
+     silent: true,
+     root
+   });
+-  if (process.platform === 'darwin') {
++  if (false) {
+     await (0, _cliDoctor().installPods)({
+       directory,
+       loader
+diff --git a/node_modules/@react-native-community/cli/build/commands/upgrade/upgrade.js b/node_modules/@react-native-community/cli/build/commands/upgrade/upgrade.js
+index f024229..c18295d 100644
+--- a/node_modules/@react-native-community/cli/build/commands/upgrade/upgrade.js
++++ b/node_modules/@react-native-community/cli/build/commands/upgrade/upgrade.js
+@@ -186,7 +186,7 @@ const installDeps = async (root, newVersion, repoName) => {
+   }
+ };
+ const installCocoaPodsDeps = async projectDir => {
+-  if (process.platform === 'darwin') {
++  if (false) {
+     try {
+       _cliTools().logger.info(`Installing CocoaPods dependencies ${_chalk().default.dim('(this may take a few minutes)')}`);
+       await (0, _cliDoctor().installPods)({

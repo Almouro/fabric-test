@@ -1,0 +1,12 @@
+appId: com.reactnativefeed
+---
+- launchApp
+- assertVisible: Notre CEO.*
+- repeat:
+    times: 5
+    commands:
+      # Fast scroll down
+      - swipe:
+          start: 50%, 90% # From (50% of width, 90% of height)
+          end: 50%, 10% # To (50% of width, 10% of height)
+          duration: 50
